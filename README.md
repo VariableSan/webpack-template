@@ -1,1 +1,1 @@
-# My First SPA Project
+# Webpack-template
