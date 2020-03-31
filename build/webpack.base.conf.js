@@ -5,6 +5,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 
+const devMode = process.env.NODE_ENV !== 'production'
+
 // Main const
 const PATHS = {
   src: path.join(__dirname, '../src'),
@@ -85,8 +87,7 @@ module.exports = {
       test: /\.s(c|a)ss$/,
       use: [
         'vue-style-loader',
-        'style-loader',
-        MiniCssExtractPlugin.loader,
+        devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
         {
           loader: 'css-loader',
           options: { sourceMap: true }
@@ -108,8 +109,7 @@ module.exports = {
     }, {
       test: /\.css$/,
       use: [
-        'style-loader',
-        MiniCssExtractPlugin.loader,
+        devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
         {
           loader: 'css-loader',
           options: { sourceMap: true }
@@ -123,7 +123,8 @@ module.exports = {
   resolve: {
     alias: {
       '~': PATHS.src,
-      'vue$': 'vue/dist/vue.js'
+      'vue$': 'vue/dist/vue.js',
+      'img$': '../../assets/img'
     }
   },
   plugins: [
