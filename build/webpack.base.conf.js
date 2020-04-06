@@ -77,7 +77,7 @@ module.exports = {
       options: {
         name: '[name].[ext]',
         outputPath: `${PATHS.assets}fonts`,
-        publicPath: devMode ? '/' : '../fonts/'
+        publicPath: devMode ? '' : '../fonts/'
       }
     }, {
       test: /\.(png|jpg|gif|svg)$/,
