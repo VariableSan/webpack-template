@@ -5,6 +5,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 
+const devMode = process.env.NODE_ENV.trim() !== 'production'
+
 // Main const
 const PATHS = {
   src: path.join(__dirname, '../src'),
@@ -29,7 +31,7 @@ module.exports = {
   output: {
     filename: `${PATHS.assets}js/[name].[hash].js`,
     path: PATHS.dist,
-    publicPath: '/'
+    publicPath: devMode ? '/' : './'
   },
   optimization: {
     splitChunks: {
@@ -73,7 +75,9 @@ module.exports = {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'file-loader',
       options: {
-        name: '[name].[ext]'
+        name: '[name].[ext]',
+        outputPath: `${PATHS.assets}fonts`,
+        publicPath: devMode ? '/' : '../fonts/'
       }
     }, {
       test: /\.(png|jpg|gif|svg)$/,
@@ -85,8 +89,7 @@ module.exports = {
       test: /\.s(c|a)ss$/,
       use: [
         'vue-style-loader',
-        'style-loader',
-        MiniCssExtractPlugin.loader,
+        devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
         {
           loader: 'css-loader',
           options: { sourceMap: true }
@@ -108,8 +111,7 @@ module.exports = {
     }, {
       test: /\.css$/,
       use: [
-        'style-loader',
-        MiniCssExtractPlugin.loader,
+        devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
         {
           loader: 'css-loader',
           options: { sourceMap: true }
@@ -123,7 +125,8 @@ module.exports = {
   resolve: {
     alias: {
       '~': PATHS.src,
-      'vue$': 'vue/dist/vue.js'
+      'vue$': 'vue/dist/vue.js',
+      'img$': '../../assets/img'
     }
   },
   plugins: [
