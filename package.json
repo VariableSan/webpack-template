@@ -1,6 +1,6 @@
 {
-  "name": "webpack_template_frontend",
-  "version": "1.0.0",
+  "name": "Webpack Template",
+  "version": "1.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -46,8 +46,10 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "regenerator-runtime": "^0.13.5",
     "vue": "^2.6.10",
     "vue-router": "^3.1.6",
-    "vuetify": "^2.2.15"
+    "vuetify": "^2.2.15",
+    "vuex": "^3.1.3"
   }
 }
