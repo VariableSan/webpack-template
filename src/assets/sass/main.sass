@@ -1,5 +1,7 @@
 @import "utils/*"
 
++reset()
+	
 html 
 	line-height: $mainLineHeight
 	font-size: $mainFontSize
@@ -29,17 +31,6 @@ body
 *, *:before, *:after
 	box-sizing: border-box 
 
-h1, h2, h3, h4, h5, h6
-	margin: 0 
-
-a
-	text-decoration: none 
-
-ul, li 
-	margin: 0
-	padding: 0
-	list-style-type: none
-
 
 section, .section 
 	position: relative
@@ -68,7 +59,11 @@ section, .section
 	min-height: 100vh
 
 
-.container 
+.container
+	+container()
+
+	
+/** .container 
 	width: 100%
 	flex: 0 0 auto
 	position: relative
@@ -81,9 +76,4 @@ section, .section
 		max-width: phoneWidth
 	
 	@media screen and (max-width: $phoneWidth) 
-		max-width: smPhoneWidth
-	
-
-
-// Modules
-// @import "modules/my-module.styl"
+		max-width: smPhoneWidth **/
