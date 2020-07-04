@@ -32,7 +32,7 @@
 
 <script>
 	export default {
-   	data: () => ({
+		data: () => ({
 			drawer: false,
 			redirectLinks: [
 				{text: 'sign in', icon:'lock_open', link:'/login'},
