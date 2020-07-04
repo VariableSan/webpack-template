@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-empty */
 export default {
 	state: {
 		drawer: false
@@ -10,6 +12,20 @@ export default {
 	mutations: {
 		setDrawer (state) {
 			state.drawer = !state.drawer
+		}
+	},
+	actions: {
+		async someAction ({commit}, {email, pass}) {
+			// commit('clearError')
+			try {
+				
+			}
+			catch (err) {
+				
+			}
+			finally {
+				
+			}
 		}
 	}
 }

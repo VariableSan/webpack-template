@@ -6,11 +6,12 @@ Vue.use(Vuex)
 
 /*==================== IMPORT MODULES START====================*/
 // import sidebar from './sidebar'
+import testStore from './testStore'
 /*==================== IMPORT MODULES END====================*/
 
 
 export default new Vuex.Store({
 	modules: {
-		// sidebar
+		testStore
 	}
 })
