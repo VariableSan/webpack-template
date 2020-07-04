@@ -104,8 +104,8 @@ module.exports = {
           options: { 
             sourceMap: true,
             implementation: require('sass'),
-            importer: globImporter(),
             sassOptions: {
+              importer: globImporter(),
               fiber: require('fibers'),
               indentedSyntax: true // optional
             }
