@@ -39,6 +39,9 @@ const settings = {
 			offset: 'N(px|%|rem)'
 		}
 		*/
+	},
+	mixinNames: {
+		container: "container",
 	}
 };
 

@@ -21,7 +21,7 @@ $offset_xs_one_side: ($offset_xs / 2)
 $fields: 30px
 $fields_sm: 15px
 
-=wrapper-full()
+=container-full()
     padding-left: $fields
     padding-right: $fields
 
@@ -37,10 +37,10 @@ $fields_sm: 15px
     #{$type}-left: $offset_one_side
     #{$type}-right: $offset_one_side
 
-=wrapper()
+=container()
     max-width: 1200px
     margin: 0 auto
-    +wrapper-full()
+    +container-full()
 
 =row-flex()
     display: flex
@@ -333,7 +333,7 @@ $fields_sm: 15px
     
     > div
         height: inherit
-        +wrapper()
+        +container()
         
         > div
             height: inherit
