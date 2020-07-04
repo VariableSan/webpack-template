@@ -1,10 +1,13 @@
+/* eslint-disable no-undef */
 const path = require('path')
 const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
+const globImporter = require('node-sass-glob-importer')
 
+// eslint-disable-next-line no-undef
 const devMode = process.env.NODE_ENV.trim() !== 'production'
 
 // Main const
@@ -101,6 +104,7 @@ module.exports = {
           options: { 
             sourceMap: true,
             implementation: require('sass'),
+            importer: globImporter(),
             sassOptions: {
               fiber: require('fibers'),
               indentedSyntax: true // optional
