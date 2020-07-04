@@ -36,6 +36,7 @@
     "pug-plain-loader": "^1.0.0",
     "sass": "^1.26.2",
     "sass-loader": "^8.0.0",
+    "smart-grid": "^2.1.2",
     "style-loader": "^1.0.0",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
