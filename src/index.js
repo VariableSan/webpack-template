@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 /*==================== ASSETS START====================*/
 // JS
 import './js/'
@@ -16,7 +18,7 @@ import store from './store/store'
 
 
 /*==================== DEPENDENCY LIBRARIES START====================*/
-const regeneratorRuntime = require("regenerator-runtime");
+const regeneratorRuntime = require("regenerator-runtime")
 /*==================== DEPENDENCY LIBRARIES END====================*/
 
 

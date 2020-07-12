@@ -8,7 +8,6 @@
 			v-btn(depressed v-for="item in redirectLinks" :key="item.text" :to="item.link" class="hidden-sm-and-down")
 				v-icon(left) {{item.icon}}
 				| {{item.text}}
-		//- v-app-bar
 
 		v-navigation-drawer(
 			app 
@@ -21,11 +20,9 @@
 						v-icon {{item.icon}}
 					v-list-item-content
 						v-list-item-title {{item.text}}
-		//- v-navigation-drawer
 
-		v-content
+		v-main
 			router-view
-		//- v-content
 		
 		v-footer(app)
 </template>
