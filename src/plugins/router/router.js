@@ -2,16 +2,17 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 // components
-import Home from '../components/pages/Home.vue'
+// import Index from '../pages/Index.vue'
+import Index from '@pages/Index.vue'
 
 Vue.use(VueRouter)
 
-let routOpt = {
+const routOpt = {
   // mode: 'history',
   routes: [
     {
       path: '/',
-      component: Home
+      component: Index
     },
     {
       path: '*',

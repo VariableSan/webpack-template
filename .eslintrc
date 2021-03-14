@@ -6,7 +6,8 @@
   },
   "parserOptions": {
     "parser": "babel-eslint",
-    "ecmaVersion": 2020
+    "ecmaVersion": 2020,
+    "sourceType": "module"
   },
   "extends": [],
   "plugins": [],

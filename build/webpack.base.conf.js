@@ -29,8 +29,9 @@ module.exports = {
   externals: {
     paths: PATHS
   },
+  target: 'web',
   entry: {
-    app: PATHS.src
+    app: `${PATHS.src}/entry-point`
     // module: `${PATHS.src}/your-module.js`,
   },
   output: {
@@ -151,9 +152,13 @@ module.exports = {
   },
   resolve: {
     alias: {
+      '@': PATHS.src,
       '~': PATHS.src,
-      vue$: 'vue/dist/vue.js',
-      img$: '../../assets/img'
+      '@assets': `${PATHS.src}/${PATHS.assets}`,
+      '@images': `${PATHS.src}/${PATHS.assets}/img`,
+      '@layouts': `${PATHS.src}/layouts`,
+      '@components': `${PATHS.src}/components`,
+      '@pages': `${PATHS.src}/pages`
     }
   },
   plugins: [
