@@ -8,12 +8,12 @@ import 'material-design-icons-iconfont/dist/material-design-icons.css'
 Vue.use(Vuetify)
 
 const vuetifyOpt = {
-	theme: {
-		dark: true
-	},
-	icons: {
-		iconfont: 'md', // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4' || 'faSvg'
-	}
+  theme: {
+    dark: true
+  },
+  icons: {
+    iconfont: 'md' // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4' || 'faSvg'
+  }
 }
 
 export default new Vuetify(vuetifyOpt)

@@ -3,11 +3,11 @@
 let myTest = 30
 
 let obj = {
-	myTest
+  myTest
 }
 
-let fun = (a) => {
-	return a * a ** 2
+let fun = a => {
+  return a * a ** 2
 }
 
 // console.log(fun(myTest))

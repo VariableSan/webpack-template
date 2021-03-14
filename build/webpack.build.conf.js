@@ -16,7 +16,7 @@ const buildWebpackConfig = merge(baseWebpackConfig, {
     warnings: true,
     optimizationBailout: true,
     colors: {
-      green: '\u001b[32m',
+      green: '\u001b[32m'
     }
   },
   plugins: []

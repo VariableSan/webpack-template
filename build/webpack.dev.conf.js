@@ -1,11 +1,10 @@
-const webpack =  require('webpack')
-const merge = require('webpack-merge')
+const webpack = require('webpack')
+const { merge } = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   // DEV config
   mode: 'development',
-  devtool: 'cheap-module-eval-source-map',
   devServer: {
     contentBase: baseWebpackConfig.externals.paths.dist,
     port: 8081,
@@ -26,7 +25,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       warnings: true,
       optimizationBailout: true,
       colors: {
-        green: '\u001b[32m',
+        green: '\u001b[32m'
       }
     }
   },
