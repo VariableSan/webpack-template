@@ -4,11 +4,11 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 /*==================== IMPORT MODULES START====================*/
-// import sidebar from './sidebar'
+import test from './test'
 /*==================== IMPORT MODULES END====================*/
 
 export default new Vuex.Store({
   modules: {
-    // sidebar
+    test
   }
 })

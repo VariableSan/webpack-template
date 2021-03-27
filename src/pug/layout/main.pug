@@ -1,6 +1,22 @@
 include ../utils/mixins
 block variables
 
+//-
+  vars: [
+    title,
+    description,
+    pageClass,
+    author
+  ]
+
+  blocks: [
+    variables,
+    links,
+    head,
+    content,
+    script
+  ]
+
 doctype html
 html(lang='en')
   head

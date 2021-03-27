@@ -7,15 +7,14 @@ v-app
     router-view
 
   FooterComponent
-    h4(class='someclass') hello
 </template>
 
 <script>
 export default {
   components: {
-    HeaderComponent: () => import('@components/header.vue'),
-    DrawerComponent: () => import('@components/drawer.vue'),
-    FooterComponent: () => import('@components/footer.vue')
+    HeaderComponent: () => import('@components/HeaderComponent.vue'),
+    DrawerComponent: () => import('@components/DrawerComponent.vue'),
+    FooterComponent: () => import('@components/FooterComponent.vue')
   },
 
   data: () => ({

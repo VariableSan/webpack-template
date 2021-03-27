@@ -10,6 +10,10 @@ v-navigation-drawer(app, temporary, v-model='drawerT')
 
 <script>
 export default {
+  model: {
+    prop: 'drawer',
+    event: 'drawer:change'
+  },
   props: {
     drawer: {
       type: Boolean,
@@ -20,11 +24,6 @@ export default {
       type: Array,
       default: () => []
     }
-  },
-
-  model: {
-    prop: 'drawer',
-    event: 'drawer:change'
   },
 
   computed: {

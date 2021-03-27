@@ -4,6 +4,9 @@ import './js/script'
 
 // Sass
 import './assets/sass/main.sass'
+
+// CSS
+import './assets/css/main.css'
 /*==================== ASSETS END====================*/
 
 /*==================== VUE DEPENDENCY START====================*/
@@ -19,13 +22,17 @@ import VueAxios from 'vue-axios'
 import 'regenerator-runtime'
 /*==================== DEPENDENCY LIBRARIES END====================*/
 
-// import components
-import App from './layouts/App.vue'
+/*==================== INITIAL APP TEMPLATE START====================*/
+import App from './init/App.vue'
+/*==================== INITIAL APP TEMPLATE END====================*/
 
-// Vue components (for use in html)
-// Vue.component('example-component', require('./components/Example.vue').default)
+/*==================== COMPONENTS START====================*/
+// Vue.component('example-component', import('./components/Example.vue))
+/*==================== COMPONENTS END====================*/
 
+/*==================== PLUGINS START====================*/
 Vue.use(VueAxios, axios)
+/*==================== PLUGINS END====================*/
 
 // Vue init
 const app = new Vue({

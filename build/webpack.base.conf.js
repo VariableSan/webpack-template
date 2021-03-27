@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 const path = require('path')
 const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -124,7 +123,14 @@ module.exports = {
                 importer: globImporter(),
                 fiber: require('fibers'),
                 indentedSyntax: true // optional
-              }
+              },
+              additionalData: `
+                @import "@sass/utils/vars.sass"
+                @import "@sass/utils/mixins.sass"
+                @import "@sass/utils/functions.sass"
+                @import "@sass/utils/smart-grid.sass"
+                @import "@sass/utils/rfs.sass"
+              `
             }
           }
         ]
@@ -135,7 +141,9 @@ module.exports = {
           devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
-            options: { sourceMap: true }
+            options: {
+              sourceMap: true
+            }
           },
           {
             loader: 'postcss-loader',
@@ -158,7 +166,8 @@ module.exports = {
       '@images': `${PATHS.src}/${PATHS.assets}/img`,
       '@layouts': `${PATHS.src}/layouts`,
       '@components': `${PATHS.src}/components`,
-      '@pages': `${PATHS.src}/pages`
+      '@pages': `${PATHS.src}/pages`,
+      '@sass': `${PATHS.src}/${PATHS.assets}/sass`
     }
   },
   plugins: [

@@ -1,19 +1,21 @@
 @import "utils/*"
 
 +reset()
+// +normalize()
+
+*, *:before, *:after
+  box-sizing: border-box
 
 html
   line-height: $mainLineHeight
   font-size: $mainFontSize
   color: $mainFontColor
   height: 100%
-  @media screen and (max-width: $desktopWidth)
+  +lg-block
     font-size: 16px
-
-  @media screen and (max-width: $tableWidth)
+  +md-block
     font-size: 15px
-
-  @media screen and (max-width: $phoneWidth)
+  +sm-block
     font-size: 14px
 
 body
@@ -25,19 +27,14 @@ body
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
-*, *:before, *:after
-  box-sizing: border-box
-
-section, .section
+section.section
   position: relative
   padding: 40px 0
-  @media screen and (max-width: $desktopWidth)
+  +lg-block
     padding: 36px 0
-
-  @media screen and (max-width: $desktopWidth)
+  +md-block
     padding: 28px 0
-
-  @media screen and (max-width: $desktopWidth)
+  +sm-block
     padding: 20px 0
 
 .wrapper
